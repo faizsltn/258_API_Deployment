@@ -32,6 +32,11 @@ app.use(async (req, res, next) => {
   }
 });
 
+// Respon untuk halaman utama /
+app.get("/", (req, res) => {
+  res.json({ message: "API is running successfully!" });
+});
+
 app.use("/api", require("./routes/api"));
 
 module.exports = app;
